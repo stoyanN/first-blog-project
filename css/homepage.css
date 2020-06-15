@@ -1,0 +1,28 @@
+.site-main {
+    width: 80%;
+    min-height: 75.7vh;
+    margin: 2em auto;
+    border-radius: 1em;
+}
+
+.img {
+    float: left;
+    width: 40vw;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 1);
+    margin-right: 3em;
+    margin-bottom: 1em;
+}
+
+.img::after {
+    clear: both;
+}
+
+.story h2 {
+    margin: 0.5em auto;
+}
+
+.story p {
+    font-size: 1.2em;
+}

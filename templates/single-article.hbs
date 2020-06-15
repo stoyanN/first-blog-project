@@ -1,0 +1,28 @@
+{{> header}}
+
+<div class="article-container">
+    <div class="article-media">
+        <img class="{{orientation}}" src="{{imageURL}}" alt="">
+        {{!-- <img class="{{orientation}}" src="../session26191-03119.JPG" alt=""> --}}
+        {{!-- <img src="{{imageURL}}" class="{{orientation}}" alt=""> --}}
+    </div>
+    <div class="buttons">
+        {{#if isAuthor}}
+        <a class="like-btn" href="#/delete/{{_id}}">Delete</a>
+        <a class="like-btn" href="#/edit/{{_id}}">Edit</a>
+        {{else}}
+        <a class="like-btn" href="#/likes/{{_id}}">{{likesCounter}} likes</a>
+        {{/if}}
+    </div>
+    <div class="article-info">
+        <h2>
+            {{!-- Our Christmas Photosession --}}
+            {{title}}
+        </h2>
+        <p>
+            {{description}}
+        </p>
+    </div>
+</div>
+
+{{> footer}}

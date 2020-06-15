@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 16px/1.5 Georgia, serif;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+li {
+    display: block;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: gold;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 3.5em;
+    text-shadow: 0 0 0.2em black;
+    font-family: 'Dancing Script', cursive;
+    color: gold;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

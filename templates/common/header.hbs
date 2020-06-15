@@ -1,0 +1,43 @@
+<header class="site-header">
+    <div class="header-nav">
+        <div class="header-logo">
+            <a href="#/home">Ryan's life</a>
+        </div>
+        {{#if isAuth}}
+        <p>Welcome, {{name}}!</p>
+        {{/if}}
+        <div class="hamburger">
+            <label for="ham-check" hidden><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="ham-check" hidden>
+            <div class="header-menu">
+                <ul>
+                    {{#if isAuth}}
+                    {{!-- <li>
+                        <p>Welcome, {{name}}!</p>
+                    </li> --}}
+                    <li>
+                        <a href="#/about">About me</a>
+                    </li>
+                    <li>
+                        <a href="#/articles">Your Stories</a>
+                    </li>
+                    {{!-- <li>
+                        <a href="#/create">Share Story</a>
+                    </li> --}}
+                    <li>
+                        <a href="#/logout">Logout</a>
+                    </li>
+                    {{else}}
+                    </li>
+                    <a href="#/login">Login</a>
+                    <li>
+                    <li>
+                        <a href="#/register">Register</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>

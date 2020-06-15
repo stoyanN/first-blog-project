@@ -1,0 +1,34 @@
+.create-article {
+    min-height: 79.5vh;
+}
+
+.create-article fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.story-description {
+    height: 20vh;
+}
+
+.create-article fieldset p:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.create-article label {
+    display: block;
+    margin-bottom: -0.5em;
+}
+
+.create-article select {
+    /* width: 25vw; */
+    /* width: 20vw; */
+    border: none;
+}
+
+textarea {
+    height: 15vh;
+}

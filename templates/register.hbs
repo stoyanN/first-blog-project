@@ -1,0 +1,31 @@
+{{> header}}
+
+<div class="register-container">
+    <div class="site-register">
+        <form action="#/register" method="POST">
+            <fieldset>
+                <legend>Register</legend>
+                <p class="email">
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" id="email" name="username" placeholder="Example: ryan@abc.bg">
+                </p>
+                <p class="password">
+                    <label for="u-password">Password</label>
+                    <br>
+                    <input type="password" id="u-password" name="password">
+                </p>
+                <p class="password">
+                    <label for="rep-u-password">Repeat Password</label>
+                    <br>
+                    <input type="password" id="rep-u-password" name="rep-password">
+                </p>
+                <p class="submit field">
+                    <button class="btn-submit" type="submit">Log In</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{{> footer}}

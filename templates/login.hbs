@@ -1,0 +1,26 @@
+{{> header}}
+
+<div class="login-container">
+    <div class="site-login">
+        <form action="#/login" method="POST">
+            <fieldset>
+                <legend>Login</legend>
+                <p class="email">
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" id="email" name="username" placeholder="Example: ryan@abc.bg">
+                </p>
+                <p class="password">
+                    <label for="u-password">Password:</label>
+                    <br>
+                    <input type="password" name="password" id="u-password">
+                </p>
+                <p class="submit">
+                    <button class="btn-submit" type="submit">Log In</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{{> footer}}

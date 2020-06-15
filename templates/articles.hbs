@@ -1,0 +1,17 @@
+{{> header}}
+
+<div class="site-articles">
+{{#each articles}}
+    <div class="single-article">
+        <div class="picture-{{orientation}}">
+            <img src="{{imageURL}}" alt="{{title}}">
+        </div>
+        <h2>
+            {{title}}
+        </h2>
+        <a href="#/article/{{_id}}">View story</a>
+    </div>
+{{/each}}
+</div>
+
+{{> footer}}

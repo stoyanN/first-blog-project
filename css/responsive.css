@@ -1,0 +1,142 @@
+@media ( max-width: 1200px) {
+    .item {
+        flex: 0 0 40%;
+    }
+    .about-title {
+        width: 60%;
+        font-size: 0.7em;
+    }
+    .main-introduce {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .story {
+        text-align: center;
+    }
+    .img {
+        width: 80%;
+        margin: 0;
+    }
+    .header-logo {
+        margin: 0;
+    }
+    .header-nav {
+        flex-direction: column;
+    }
+    .site-articles {
+        justify-content: space-between;
+    }
+    .single-article {
+        max-width: 45%;
+    }
+    .single-article h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media ( max-width: 800px) {
+    .about-title {
+        width: 60%;
+        font-size: 1em;
+    }
+    .header-menu {
+        display: none;
+    }
+    .hamburger label {
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+        color: white;
+    }
+    input:checked+div {
+        display: block;
+    }
+    .item {
+        flex: 0 0 90%;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .header-logo {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+        text-align: center;
+        display: block;
+    }
+    .header-nav,
+    .footer-nav {
+        display: block;
+        text-align: center;
+    }
+    .header-logo {
+        margin: 0 auto;
+    }
+    form input {
+        width: 35vw;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    textarea {
+        width: 35vw;
+    }
+    .header-nav ul li+li,
+    ul li+li {
+        margin-left: 0;
+    }
+    /* .article-media img  */
+    .Portrait {
+        max-width: 60%;
+    }
+    .Landscape {
+        max-width: 80%;
+    }
+    .single-article {
+        max-width: 43%;
+    }
+}
+
+@media ( max-width: 600px) {
+    .header-logo {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+        text-align: center;
+        display: block;
+    }
+    .header-nav,
+    .footer-nav {
+        display: block;
+    }
+    .header-logo {
+        margin: 0 auto;
+    }
+    .about-container {
+        width: 100%;
+    }
+    .single-article {
+        max-width: 100%;
+    }
+    .single-article h2,
+    .article-info h2 {
+        font-size: 2em;
+    }
+    .article-info {
+        width: 95%;
+    }
+    /* .article-media img  */
+    .Portrait {
+        max-width: 80%;
+    }
+    .Landscape {
+        max-width: 100%;
+    }
+    .buttons {
+        flex-wrap: nowrap;
+    }
+    .like-btn {
+        font-size: 1em;
+    }
+}

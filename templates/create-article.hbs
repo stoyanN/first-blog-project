@@ -1,0 +1,32 @@
+{{> header}}
+
+    <div class="create-article">
+        <form action="#/create" method="POST">
+            <fieldset>
+                <legend>Share your story</legend>
+                    <p>
+                    <input type="text" name="imageURL" placeholder="Image URL">
+                    </p>
+                    <p>
+                    <label for="pic-direction">Select picture orientation</label>
+                    <br>
+                    <select name="orientation" id="pic-direction">
+                        <option>Landscape</option>
+                        <option>Portrait</option>
+                    </select>
+                    </p>
+                    <p>
+                    <input type="text" name="title" placeholder="Your story title">
+                    </p>
+                    <p>
+                    <textarea name="description" cols="30" rows="10" placeholder="Tell us your story"></textarea>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn-submit">Share</button>
+                    </p>
+            </fieldset>
+        </form>
+    </div>
+
+
+{{> footer}}

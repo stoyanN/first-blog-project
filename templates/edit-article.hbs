@@ -1,0 +1,33 @@
+{{> header}}
+
+    <div class="create-article">
+        <form action="#/edit/{{_id}}" method="POST">
+            <fieldset>
+                <legend>Share your story</legend>
+                    <p>
+                    <input type="text" name="imageURL" placeholder="Image URL" value="{{imageURL}}">
+                    </p>
+                    <p>
+                    <label for="pic-direction">Select picture orientation</label>
+                    <br>
+                    <select name="orientation" id="pic-direction">
+                        <option selected>{{orientation}}</option>
+                        <option>Landscape</option>
+                        <option>Portrait</option>
+                    </select>
+                    </p>
+                    <p>
+                    <input type="text" name="title" placeholder="Your story title" value="{{title}}">
+                    </p>
+                    <p>
+                    <textarea name="description" cols="30" rows="10" placeholder="Tell us your story">{{description}}</textarea>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn-submit">Edit</button>
+                    </p>
+            </fieldset>
+        </form>
+    </div>
+
+
+{{> footer}}

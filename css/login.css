@@ -31,7 +31,7 @@ fieldset legend {
     display: inline-block;
     width: 70%;
     font-size: 1.5em;
-    margin: 1em 0em;
+    margin: 1em auto;
     border-bottom: 2px solid white;
 }
 

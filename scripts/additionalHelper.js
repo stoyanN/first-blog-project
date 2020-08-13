@@ -8,9 +8,9 @@ export function showUser(ctx) {
 }
 
 export function saveSession(userInfo) {
-    localStorage.setItem("userId", userInfo._id);
-    localStorage.setItem("authtoken", userInfo._kmd.authtoken);
-    localStorage.setItem("email", userInfo.username);
+    localStorage.setItem("userId", userInfo.objectId);
+    localStorage.setItem("authtoken", userInfo["user-token"]);
+    localStorage.setItem("email", userInfo.email);
 }
 
 export function emailIsValid(email) {

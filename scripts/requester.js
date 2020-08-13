@@ -1,21 +1,19 @@
-const baseUrl = "https://baas.kinvey.com";
-const apiKey = "kid_HJ6W-5hgD";
-const appSecret = "4b12e3bf8e074a488366af4e149f1b9c";
+const baseUrl = "https://api.backendless.com";
+const apiId = "4ADC6220-9988-B2BF-FFFF-6D0C6BA55A00";
+const restApiKey = "03FB34BD-E699-428D-ABEC-7EA79BFB92BF";
 
-function createAuthorization(type) {
-    return type === "Basic" ?
-        `Basic ${btoa(`${apiKey}:${appSecret}`)}`
-    : `Kinvey ${localStorage.getItem("authtoken")}`;
-}
 
-function createHeader(authType, httpMethod, data) {
+function createHeader(httpMethod, data, authToken) {
     const header = {
         method: httpMethod,
         headers: {
-            "Authorization": createAuthorization(authType),
             "Content-Type": "application/json"
         }
     };
+
+    if (authToken !== null) {
+        header.headers["user-token"] = authToken;
+    }
 
     if (httpMethod === "PUT" || httpMethod === "POST") {
         header.body = JSON.stringify(data);
@@ -42,46 +40,47 @@ function deserializeData(x) {
 }
 
 function fetchData(folderName, endpoint, headers) {
-    const url = `${baseUrl}/${folderName}/${apiKey}/${endpoint}`;
+    const url = `${baseUrl}/${apiId}/${restApiKey}/${folderName}/${endpoint}`;
 
     return fetch(url, headers).then(errorHandler).then(deserializeData);
 }
 
-export function getData(authType, folderName, endpoint) {
-    const header = createHeader(authType, "GET");
+export function getData(folderName, endpoint, authToken) {
+    const header = createHeader("GET", {} , authToken);
 
     return fetchData(folderName, endpoint, header);
 }
 
-export function postData(authType, folderName, endpoint, data) {
-    const header = createHeader(authType, "POST",data);
-
-    return fetchData(folderName, endpoint, header)
-}
-
-export function putData(authType, folderName, endpoint, data) {
-    const header = createHeader(authType, "PUT", data);
+export function postData(folderName, endpoint, data, authToken) {
+    const header = createHeader("POST", data, authToken);
 
     return fetchData(folderName, endpoint, header);
 }
 
-export function deleteData(authType, folderName, endpoint) {
-    const header = createHeader(authType, "DELETE");
+export function putData(folderName, endpoint, data, authToken) {
+    const header = createHeader("PUT", data, authToken);
 
     return fetchData(folderName, endpoint, header);
 }
 
-export function logOutUser(authType, folderName, endpoint, data) {
-    const header = createHeader(authType, "POST", data);
+export function deleteData(folderName, endpoint, authToken) {
+    const header = createHeader("DELETE", {}, authToken);
+    const url = `${baseUrl}/${apiId}/${restApiKey}/${folderName}/${endpoint}`;
+
+    return fetch(url, header).then(errorHandler);
+}
+
+export function logOutUser(folderName, endpoint, authToken) {
+    const header = createHeader("GET", {} , authToken);
+    const url = `${baseUrl}/${apiId}/${restApiKey}/${folderName}/${endpoint}`;
+
     
-    const url = `${baseUrl}/${folderName}/${apiKey}/${endpoint}`;
-    
-    return fetch(url, headers).then(errorHandler);
+    return fetch(url, header).then(errorHandler);
 }
 
 
-export function registerUser(authType, folderName, endpoint, data) {
-    const header = createHeader(authType, "POST", data);
+export function registerUser(authToken, folderName, endpoint, data) {
+    const header = createHeader(authToken, "POST", data);
 
     return fetchData(folderName, endpoint, header);
 }

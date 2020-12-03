@@ -9,7 +9,7 @@ let partials = {
 export async function loadHomePage(ctx) {
     showUser(ctx);
 
-    ctx.loadPartials(partials).partial("./templates/homePage.hbs");
+    ctx.loadPartials(partials).partial("./templates/homepage.hbs");
 }
 
 export async function loadArticles(ctx) {
